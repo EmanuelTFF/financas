@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimento em Ações</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="#" class="logo">Invest<span>Ação</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#inicio">Início</a></li>
+                <li class="nav-item"><a href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a href="#tipos-investimento">Tipos de Investimento</a></li>
+                <li class="nav-item"><a href="#graficos">Gráficos</a></li>
+                <li class="nav-item"><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Seção inicial com animação -->
+        <section id="inicio" class="home">
+            <div class="home-text">
+                <h4 class="text-h4">Bem-vindo ao Invest<span>Ação</span></h4>
+                <h1 class="text-h1">Tudo sobre investimentos no mercado de ações</h1>
+                <p>Aprenda a investir com segurança, conhecimento e estratégias eficazes para garantir seu sucesso financeiro a longo prazo.</p>
+                <a href="#tipos-investimento" class="home-btn">Comece agora</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="home-img">
+                <img src="https://investidor10.com.br/conteudo/wp-content/uploads/2020/09/by-freepik2-2048x1365.jpg" alt="Investimento em Ações">
+            </div>
+        </section>
+<br>
+<br>
+<br>
+<br>
+
+        <!-- Seção sobre investimentos -->
+        <section id="sobre" class="features">
+            <div class="feature-box">
+                <i class='bx bx-chart'></i>
+                <h2>O que são ações?</h2>
+                <p>Ações são títulos que representam uma fração do capital social de uma empresa. Ao comprar uma ação, você se torna sócio da empresa e pode lucrar com sua valorização e dividendos.</p>
+            </div>
+            <div class="feature-box">
+                <i class='bx bx-line-chart'></i>
+                <h2>Por que investir?</h2>
+                <p>Investir em ações permite a construção de patrimônio a longo prazo. A Bolsa de Valores oferece oportunidades tanto para iniciantes quanto para investidores experientes.</p>
+            </div>
+            <div class="feature-box">
+                <i class='bx bx-bar-chart'></i>
+                <h2>Riscos e Recompensas</h2>
+                <p>Investir em ações envolve riscos, mas pode oferecer retornos maiores do que investimentos tradicionais, como a poupança ou renda fixa.</p>
+            </div>
+        </section>
+<br><br><br><br><br>
+        <!-- Seção de gráficos -->
+        <section id="graficos" class="graficos">
+            <h2>Análise de Mercado</h2>
+            <p>Acompanhe os principais índices e saiba como eles impactam seus investimentos.</p>
+            <div class="chart-container">
+                <canvas id="myChart" class="chart"></canvas>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>InvestAção</h3>
+            <p>Seu guia completo para investir no mercado de ações.</p>
+            <ul class="socials">
+                <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="#"><i class='bx bxl-linkedin'></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'line', // ou 'bar', 'pie', etc.
+    data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+        datasets: [{
+            label: 'Investimentos',
+            data: [120, 190, 300, 250, 450, 350],
+            borderColor: 'rgba(42,157,143,1)',
+            backgroundColor: 'rgba(42,157,143,0.2)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+
